@@ -3,7 +3,7 @@
  */
 
 
-function Car( brand, model, year, cost, dimensions, fuelEconomy, kerbWeight, tankCapacity ) {
+function Car( brand, model, year, cost, dimensions, fuelEconomy, kerbWeight, tankCapacity, acceleration, maxSpeed, img ) {
     this.brand = brand;
     this.model = model;
     this.year = year;
@@ -12,51 +12,67 @@ function Car( brand, model, year, cost, dimensions, fuelEconomy, kerbWeight, tan
     this.fuelEconomy = fuelEconomy;
     this.kerbWeight = kerbWeight;
     this.tankCapacity = tankCapacity;
+    this.acceleration = acceleration;
+    this.maxSpeed = maxSpeed;
+    this.img = img;
+}
+
+Car.prototype.imgUrl = function () { return "assets/img/" + this.img ;};
+
+function Dimensions(minLength,maxLength,minWidth, maxWidth, minHeight, maxHeight) {
+    this.minLength = minLength;
+    this.maxLength = maxLength;
+    this.minWidth = minWidth;
+    this.maxWidth = maxWidth;
+    this.minHeight = minHeight;
+    this.maxHeight = maxHeight;
 }
 
 
-var au
+
+var
+    audiCar =     new Car("Audi", "A4", 2017, 26,265,
+                  new Dimensions(4,725, 4,726, 1,842, 1,842, 1,427, 1,434),
+                          "45-74 mpg combined (36-63 city, 52-83 highway)",
+                          "1,320 to1,695 kg",
+                          "40 to 58 L",
+                          null,
+                          null,
+                          "audiImg.jpg"
+                          ),
+
+    mercedesCar = new Car("Mercedes-Benz", "C-Class", 2017, 28,160,
+                  new Dimensions(4,686, 4,771, 1,810, 1,877, 1,400, 1,467),
+                          "32-79 mpg combined (23-72 city, 39-83 highway)",
+                          null,
+                          null,
+                          "0-62 mph: 3.9 to 10.6 seconds",
+                          "76.43 to 154.7 mph",
+                          "mercedesImg.jpg"
+                         ),
+
+    bmwCar =      new Car("BMW", "3 Series", 2017, 24,800,
+                  new Dimensions(4,633, 4,671, 1,811, 1,877, 1,424, 1,467),
+                          "32-72 mpg combined (23-60 city, 41-83 highway)",
+                          null,
+                          null,
+                          "0-62 mph: 4.2 to 11.2 seconds",
+                          null,
+                          "bmwImg.jpg"
+                         ),
+    jaguarCar =   new Car("Jaguar", "XE", 2017, 27,525,
+                  new Dimensions(4,672, 4,672, 1,850, 1,850, 1,416, 1,425),
+                           "35-74 mpg combined (24-64 city, 46-83 highway)",
+                           "1,435 to 1,655 kg",
+                           null,
+                           "0-62 mph: 5 to 8.4 seconds",
+                           null,
+                           "jaguarImg.jpg"
+                       )
+;
 
 
 
 
-/*
-Audi A4
- RRP: From £26,265
- Dimensions: 4,725-4,726 mm L x 1,842 mm W x 1,427-1,434 mm H
- Fuel economy: 45-74 mpg combined (36-63 city, 52-83 highway)
- Kerb weight: 1,320 to 1,695 kg
- Fuel tank capacity: 40 to 58 L
-*/
 
 
-/*
-
- Mercedes C-Class
-
- RRP: From £28,160
- Dimensions: 4,686-4,771 mm L x 1,810-1,877 mm W x 1,400-1,467 mm H
- Fuel economy: 32-79 mpg combined (23-72 city, 39-83 highway)
- Acceleration 0-62 mph: 3.9 to 10.6 seconds
- Max speed: 76.43 to 154.7 mph
-
- */
-
-/*
- BMW 3 Series
-
- RRP: From £24,800
- Dimensions: 4,633-4,671 mm L x 1,811-1,877 mm W x 1,424-1,467 mm H
- Fuel economy: 32-72 mpg combined (23-60 city, 41-83 highway)
- Kerb weight: 1,475 to 1,770 kg
- Acceleration 0-62 mph: 4.2 to 11.2 seconds
- */
-
-
-/*  Jaguar XE
- RRP: From £27,525
- Dimensions: 4,672 mm L x 1,850 mm W x 1,416-1,425 mm H
- Fuel economy: 35-74 mpg combined (24-64 city, 46-83 highway)
- Kerb weight: 1,435 to 1,655 kg
- Acceleration 0-62 mph: 5 to 8.4 seconds
-*/
