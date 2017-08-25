@@ -130,7 +130,7 @@
             for (var i = 0; i < accessoryTypes.length; i++) {
                 var listItem = document.createElement('li');
 
-                if(i % 2 == 0 ) {
+                if(i % 2 == 0) {
                   listItem.className = 'gray row';
                 } else {
                   listItem.className = 'lightGray row'

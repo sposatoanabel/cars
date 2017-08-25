@@ -6,30 +6,57 @@ address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike
 b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead,
 tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output,
 ruby, section, summary, time, mark,
-audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
-img{vertical-align: top;}
+audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+img {
+    vertical-align: top;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, menu, nav,
-section, canvas, main, video { display: block; }
-body { line-height: 1; }
-ol, ul { list-style: none; }
-blockquote, q { quotes: none; }
-blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
-table { border-collapse: collapse; border-spacing: 0; }
+section, canvas, main, video {
+    display: block;
+}
 
+body {
+    line-height: 1;
+}
 
+ol, ul {
+    list-style: none;
+}
 
-html, body{
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html, body {
     width: 100%;
     height: 100%;
     font-size: 16px;
 }
 
-
 /* -----------------------------
     GENERAL STYLE
 -------------------------------- */
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -39,51 +66,53 @@ body{
     width: 80%;
 }
 
-.flex-container{
-    display: flex;
+.flex-container {
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 }
 
-
-h1{
+h1 {
     font-size: 4rem;
     line-height: 3.2rem;
     color: #ffffff;
 }
 
-h2{
-   text-align: center;
-   font-size: 2rem;
-   line-height: 2.5rem;
-   margin: 4rem 0;
-   font-weight: bold;
-   margin-bottom: 1rem;;
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 4rem 0;
+    font-weight: bold;
+    margin-bottom: 1rem;;
 }
 
-h3{
+h3 {
     font-size: 1.2rem;
     line-height: 1.5rem;
     text-align: center;
 }
 
-h4{
-    text-align:center;
+h4 {
+    text-align: center;
     /*margin: 2rem 0;*/
 
 }
 
-p{
-    line-height:1.5rem;
+p {
+    line-height: 1.5rem;
     font-size: 1rem;
 
 }
 
-#carContainer img{
+#carContainer img {
     vertical-align: top;
     width: 100%;
     height: auto;
 }
 
-.red-line{
+.red-line {
     border: 3px solid #99161C;
     width: 7%;
     text-align: center;
@@ -95,20 +124,26 @@ p{
     TYPOGRAPHY
 -------------------------------- */
 
-
-
-
-
 /* -----------------------------
     LAYOUT
 -------------------------------- */
+.flex {
+    display: flex;
+    flex-direction: row;
 
+}
+
+.centerElements {
+    justify-content: space-around;
+    align-content: center;
+
+}
 
 /* -----------------------------
     HEADER
 -------------------------------- */
 
-header{
+header {
     background-color: #292929;
     position: fixed;
     top: 0;
@@ -118,33 +153,32 @@ header{
     z-index: 99999;
 }
 
-
-.navContainer{
+.navContainer {
     align-items: center;
     display: flex;
     justify-content: space-between;
 }
 
-.navContainer ul{
+.navContainer ul {
 
 }
 
-nav ul{
+nav ul {
     display: flex;
     list-style: none;
     justify-content: space-between;
     width: 50%;
 }
 
-#logo img{
+#logo img {
     vertical-align: middle;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: white;
     padding: 30px 43px;
@@ -153,9 +187,10 @@ nav ul li a{
     border-radius: 2px;
 }
 
-nav ul li a:link{
+nav ul li a:link {
     color: #ffffff;
 }
+
 nav ul li a:hover {
     background-color: #403d3d;
     color: #ffffff;
@@ -165,30 +200,30 @@ nav ul li a:hover {
     BANNER
 -------------------------------- */
 
-#banner{
+#banner {
     background: url("../img/bannerAllCars.jpg") no-repeat 50% 0;
     background-size: 100%;
     height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     /*justify-content: center;*/
     -webkit-align-content: flex-start;
     align-content: flex-start;
 }
 
-#banner h1{
-    color: #ffffff ;
+#banner h1 {
+    color: #ffffff;
 }
 
-#bannerContentWrapper{
+#bannerContentWrapper {
     padding: 3rem;
     text-align: center;
     width: 60%;
-    margin-top:7rem;
+    margin-top: 7rem;
 }
 
-#banner p{
+#banner p {
     font-size: 2rem;
     color: #ffffff;
     line-height: 2.2rem;
@@ -199,37 +234,39 @@ nav ul li a:hover {
     CAR  SECTION
 -------------------------------- */
 
-#cars{
+#cars {
     display: flex;
-    flex-flow:row wrap;
+    flex-flow: row wrap;
     -webkit-justify-content: space-around;
     justify-content: space-around;
 }
 
-input[name="car"]{
-     position: relative;
-     left: 45%;
-     display: block;
-     width: 100%;
-     margin: 0 auto;
+input[name="car"] {
+    position: relative;
+    left: 45%;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
 }
-label{
+
+label {
     position: relative;
 }
 
-.carContainer{
+.carContainer {
     margin: 0 auto;
     max-width: 1200px;
-    width:80%;
+    width: 80%;
 }
 
-.row{
+.row {
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
-.col{
+
+.col {
     margin-bottom: 2%;
     width: 23%;
     padding: 4% 0;
@@ -238,70 +275,69 @@ label{
     border-radius: 5px;
 }
 
-.col-three-quarters{
-    width:75%;
-    margin-right:2%;
+.col-three-quarters {
+    width: 75%;
+    margin-right: 2%;
 
 }
 
-.col-one-quarter{
+.col-one-quarter {
     width: 23%;
 
 }
 
-.col-fourth-quarters{
+.col-fourth-quarters {
     width: 100%;
 }
 
-#img{
+#img {
     vertical-align: top;
     display: block;
     width: 65%;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
-.col-half:last-child{
-    margin-right:0;
+.col-half:last-child {
+    margin-right: 0;
 }
 
 .col:last-child {
     margin-right: 0;
 }
 
-#carInfo h4{
-    text-align:left;
-    width:23%;
-    margin-right:2%;
+#carInfo h4 {
+    text-align: left;
+    width: 23%;
+    margin-right: 2%;
 }
 
-#carInfo p{
-    margin-right:0;
-    width:75%;
+#carInfo p {
+    margin-right: 0;
+    width: 75%;
 }
 
-#carInfo h4, #carInfo p{
+#carInfo h4, #carInfo p {
     /*margin:0 0;*/
-    color:#888888;
-    display:inline-block;
+    color: #888888;
+    display: inline-block;
 }
 
-.gray{
+.gray {
     background-color: #ececec;
 }
 
-.gray, .lightGray{
-    padding:10px;
-    box-sizing:border-box;
+.gray, .lightGray {
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.lightGray{
+.lightGray {
     background-color: #f7f7f7;
 }
 
+#cars .intro {
+    text-align: center;
 
-#cars .intro{
-    text-align:center;
-    color:#;
     margin: 2rem 0;
 }
 
@@ -310,7 +346,7 @@ label{
 -------------------------------- */
 
 label {
-    display:inline-block;
+    display: inline-block;
     margin: 0 0 -1px;
     padding: 15px 25px;
     font-weight: 600;
@@ -319,54 +355,81 @@ label {
     border: 1px solid transparent;
 }
 
-label:hover{
+label:hover {
     color: #888;
     cursor: pointer;
 }
 
 input:checked + label {
-    color: #555;
+    color: #11A9C8;
     border: 1px solid #ddd;
-    border-top: 2px solid orange;
+    border-top: 2px solid #11A9C8;
     border-bottom: 1px solid #fff;
 }
+
+
 
 #tab1:checked ~ #audiTextDescription,
 #tab2:checked ~ #mercedesTextDescription,
 #tab3:checked ~ #bmwTextDescription,
 #tab4:checked ~ #jaguarTextDescription {
-    display:block;
+    display: block;
 }
 
 #carAdvice article {
-  display: none;
-  padding: 20px 0 0;
-  border-top: 1px solid #ddd;
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
 }
 
-#carAdvice [type="radio"]{
-  display: none;
+#carAdvice [type="radio"] {
+    display: none;
 }
 
-
-#carAdvice p{
-  text-align: left;
-  color: #949393;
-  padding: 38px;
+#carAdvice p {
+    text-align: left;
+    color: #949393;
+    padding: 38px;
 }
-
 
 /* -----------------------------
    FOOTER
 -------------------------------- */
 
-footer{
-  background: #142435;
-  padding: 15px;
+footer {
+    background: #142435;
+    padding: 15px;
 
 }
 
-.copyright{
-  font-size: 1rem;
-  color: #466074;
+footer hr {
+    border: 1px solid #466074;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #466074;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.copyright:first-child {
+    font-size: 1rem;
+    color: #95A1B5;
+}
+
+#socialMedia {
+    width: 15%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+footer a:link {
+    color: #95A1B5;
+    text-decoration: none;
+}
+
+footer a:hover, a:visited {
+    color: #646d81;
+    text-decoration: none;
 }
