@@ -27,6 +27,11 @@
 
 ## Plugin-specific files:
 
+
+ .DS_Store
+ assets/.DS_Store
+ assets/img/.DS_Store
+
 # IntelliJ
 /out/
 
@@ -44,3 +49,10 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+.psd
+.ai
+.iml
+
+.idea/
+.idea

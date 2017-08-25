@@ -3,34 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <div id="wrapper">
     <header>
-        <div id="logo"></div>
-        <nav>
-            <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            </ul>
-        </nav>
+        <div class="container navContainer">
+            <div id="logo"><img src="assets/img/logo150x47.png" width="150" height="47"></div>
+            <nav>
+                <ul>
+                    <li><a href="">Cars</a></li>
+                    <li><a href="">Details</a></li>
+                    <li><a href="">Advice</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </div><!--  / container -->
     </header>
     <main>
         <section id="banner">
-
+            <div class="container" id="bannerContentWrapper">
+                <h1>Your next Car</h1>
+                <p>Audi A4 vs Mercedes-Benz vs C-Class vs BMW series 3 vs Jaguar XE</p>
+            </div>
         </section>
         <section id="cars">
-            <div class="container" id="carContainer">
+            <div class="carContainer" id="carContainer">
+                <h2>CARS</h2>
+                <div class="red-line"></div>
+                <p class="intro">Comfort or Luxury. Select the brand you like most and compare prices.</p>
+                <div class="row">
+                    <div class="col">
+                        <label><h3>Audi A4</h3><img src="assets/img/audi-200x267.png" width="200" height="134"
+                                                    alt="audi"></label>
+                        <input name="car" data-identifier="audi" type="radio" checked>
+                    </div>
+                    <div class="col">
+                        <label><h3>Mercedes C-class</h3><img src="assets/img/mercedes-200X267.png" width="200"
+                                                             height="134" alt="mercedes"></label>
+                        <input name="car" data-identifier="mercedes" type="radio">
+                    </div>
+                    <div class="col">
+                        <label><h3>BMW 3 Series</h3><img src="assets/img/bmw-200x267.png" width="200" height="134"
+                                                         alt="bmw"></label>
+                        <input name="car" data-identifier="bmw" type="radio">
+                    </div>
+                    <div class="col">
+                        <label><h3>Jaguar XE</h3><img src="assets/img/jaguar-200X267.png" width="200" height="134"
+                                                      alt="jaguar"></label>
+                        <input name="car" data-identifier="jaguar" type="radio">
+                    </div>
+                </div>
+            </div><!-- / carContainer-->
+        </section>
+        <section id="carDescription">
+            <div class="container" id="carInfo">
+                <div class="row">
+                    <h2>Car Details</h2>
+                    <div class="col-fourth-quarters">
+                        <div class="gray row">
+                            <h4>Brand</h4>
+                            <p id="brand" class="carInfo"></p>
+                        </div>
+                        <div class="lightGray row">
+                            <h4>Model</h4>
+                            <p id="model"></p>
+                        </div><!-- / row-->
+                        <div class="gray row">
+                            <h4>Year</h4>
+                            <p id="year"></p>
+                        </div><!-- / row-->
+                        <div class="lightGray row">
+                            <h4>Price From</h4>
+                            <p id="cost">£</p>
+                        </div>
+                        <div class="gray row">
+                            <h4>Dimensions</h4>
+                            <p id="dimensions"></p>
+                        </div><!-- / row-->
+                        <div class="lightGray row">
+                            <h4>Fuel Economy</h4>
+                            <p id="fuelEconomy"></p>
+                        </div><!-- / row-->
+                        <div class="gray row">
+                            <h4>Kerb Weight</h4>
+                            <p id="kerbWeight"></p>
+                        </div><!-- / row-->
+                        <div class="lightGray row">
+                            <h4>Tank Capacity</h4>
+                            <p id="tankCapacity"></p>
+                        </div><!-- / row-->
+                        <div class="gray row">
+                            <h4>Acceleration</h4>
+                            <p id="acceleration"></p>
+                        </div><!-- / row-->
+                        <div class="lightGray row">
+                            <h4>Max Speed</h4>
+                            <p id="maxSpeed"></p>
+                        </div><!-- / row-->
+                        <h2>Add any accessory</h2>
+                        <div id="accessoriesListContainer">
+                        </div>
+                    </div><!-- / col 1-->
+                </div><!--/ row-->
 
+                <div class="row">
+                    <div class="col-fourth-quarters">
+                        <img id="img" src="" alt="" height="">
+                    </div><!-- / col 2-->
+                </div>
+            </div><!-- / container-->
+        </section>
+        <section id="carAdvice">
+            <div class="container">
+                <input type="radio" id="tab1" name="tabs" checked>
+                <label for="tab1">Audi</label>
+                <input type="radio" id="tab2" name="tabs">
+                <label for="tab2">Mercedes-Benz</label>
+                <input type="radio" id="tab3" name="tabs">
+                <label for="tab3">BMW</label>
+                <input type="radio" id="tab4" name="tabs">
+                <label for="tab4">Jaguar</label>
+                <article id="audiTextDescription">
+                    <p class="description">The A4 is one of Audi’s most important models and this all-new version will
+                        ensure it remains one of the bestsellers in the class. The compact executive saloon
+                        is better than ever and with a focus on technology and comfort, makes it an interesting
+                        alternative for those who don’t want the sporty character of the BMW 3 Series.</p>
+                </article>
+                <article id="mercedesTextDescription">
+                    <p class="description">If you want a posh-looking family car or a comfortable day-to-day cruiser
+                        that makes you feel good about yourself, then you should definitely consider the Mercedes
+                        C-Class.
+                        You can get it as this saloon or a load-lugging C-Class Estate,
+                        sporty C-Class Coupe or stylish C-Class Cabriolet.</p>
+                </article>
+                <article id="bmwTextDescription">
+                    <p class="description">It’s the latter of those four points that newer rivals such as the Mercedes
+                        C-Class and Audi A4 struggle to match. Specified right, the BMW feels like a four-door sports
+                        car to drive. Its rear-wheel-drive setup gives balanced handling,
+                        the suspension is comfortable – yet firm enough to keep body roll in check, and the
+                        steering is accurate and weighty.</p>
+                </article>
+                <article id="jaguarTextDescription">
+                    <p class="description">.The Jaguar XE is a great small saloon car. It looks fantastic, comes with a
+                        smart interior, a decent range
+                        of engines and is fun to drive. Its seating position is excellent and all
+                        but entry-level models come well-equipped, too.</p>
+                </article>
             </div>
-
         </section>
     </main>
-</div><!-- / wrapper-->
+    <footer>
+        <div class="container">
 
-<script class="assets/js/script.js"></script>
+
+            <p class="copyright">© 2017 Next Car Ltd. All rights reserved.
+                Average savings are calculated daily based on the best dealer prices on Next Car vs manufacturer RRP.
+                See more details here. Next Car acts as a credit broker in providing you with access to motor
+                dealerships
+                who may arrange leasing or finance options for you;
+                you do not buy a car from us. We connect you with car dealers,
+                who provide offers showing the cash price and finance price. </p>
+        </div>
+    </footer>
+</div><!-- / wrapper-->
+<script src="assets/js/script2.js"></script>
 </body>
 </html>
